@@ -26,8 +26,8 @@ h1 {
 	color:white;
 }
 
-.nice-link:hover{
-	color:green;
+.nav-link:hover{
+	color:#0000cc;
 	text-decoration:underline;
 	transition: 3s;
 }
