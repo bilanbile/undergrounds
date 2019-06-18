@@ -1,137 +1,69 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* background-image: url('map-cut3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    
     width: 100vw;
+    height: 100vh; */
 }
 
-/*----------------------------------------Section 1------------------------------------ */
-.sec_1 {
+#container {
+    height: 100vh;
+    width: 100vw;
     position: relative;
 }
 
-#landing {
-    height: 100vh;
-    width: 100vw;
-}
-
-#bg {
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("Underground.png");
-    background-position: center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    filter: blur(8px);
-}
-
-.container {
+img {
     position: absolute;
-    bottom: 100px;
-    left: 90px;
+    border-radius: 25px;
+    top: 100px;
+    left: 200px;
+    width: 70%;
+    box-shadow: 3px 8px 15px #8c8c8c;
+}
+
+.fa-coffee {
+    position: absolute;
     z-index: 2;
+    font-size: 15px;
+    top: 290px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 100%;
+    padding: 0.25em;
+    transition: 0.3s transform;
 }
 
-.text-alignment {
-    text-align: center;
-}
-
-/*---------------------------------------------------- Section 2 ----------------------------------------- */
-
-.sec_2 {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("Underground.png");
-    background-position: center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-}
-
-/* The cup icons */
-.svg-icon {
-    width: 2em;
-    height: 2em;
+.fa-coffee:hover {
+    color: brown;
+    border: 1px solid brown;
     cursor: pointer;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out 0.2s;
+    transform: scale(1.2);
 }
 
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-    fill: #A52A2A;
-}
-
-.svg-icon circle {
-    stroke: #4691f6;
-    stroke-width: 1;
-}
-
-/* The individual cups */
 .one {
-    top: 250px;
-    left: calc(100vw - 70%);
-    position: absolute;
+left: 261px;
 }
 
 .two {
-    top: 250px;
-    left: calc(100vw - 60%);
+left: 500px;
 }
 
 .three {
-    top: 250px;
-    left: calc(100vw - 50%);
-}
+    left: 619px;
+} 
 
 .four {
-    top: 250px;
-    left: calc(100vw - 40%);
+    left: 737px;
 }
 
 .five {
-    top: 250px;
-    left: calc(100vw - 30%);
+    left: 810px;
 }
 
-
-/* .tooltiptext */
-.tip {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    top: 200px;
-    left: calc(100vw - 73%);
-    background-color: rgba(0,0,0, 0.75);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-}
-
-.tip.show {
-    display: block;
-}
-
-.tip_2 {
-    top: 300px;
-    left: calc(100vw - 63%);
-}
-
-/*Charlotte's CSS*/
-/*takes tag name*/
-p {
-    color: blue;
-    background-color: yellow;
-    border: 3px dotted green;
-    border-left: 10px solid red;
-    font-size: 30px;
-}
-
-h1 {
-    color: green;
+.six {
+    left: 871px;
 }
