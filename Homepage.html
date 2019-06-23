@@ -21,6 +21,16 @@
               e.stopPropagation();
           });
       });
+      $('#edit').on('click', function(){
+        $('body').addClass('active-modal');
+        $('.box-modal').addClass('modal-show');
+      });
+
+      // $('.overlay').on('click', function(){
+      //   $('body').removeClass('active-modal');
+      //   $('.box-modal').removeClass('modal-show');
+      // })
+
 </script>
       <link rel="stylesheet" href="CSS/bootsnipp.css">
 
@@ -100,6 +110,8 @@
 <main role="main" class="container">
 
   <img src="undergrounds.png" class="grid-image rounded mx-auto d-block" width="15%" height="15%" style="margin-top:1%; margin-bottom:1px">
+<button type="button" class="open-button btn btn-primary btn-lg" onclick="openForm()" style="background-color:#0000cc;margin-left:auto;margin-right:auto;display:block">About Us <i class="em em-coffee"></i></button>
+
 <h1 style="margin-bottom:1%"> <center>Welcome to Undergrounds!</h1>  </center>
 <div class="row text-alignment">
 <div class="col-sm">
@@ -115,15 +127,7 @@
 <button type="button" class="open-button btn btn-primary btn-lg" onclick="openForm()" style="background-color:#0000cc;margin-left:auto;margin-right:auto;display:block;margin-top:5%;margin-bottom:20%">Click to join now <i class="em em-coffee"></i></button>
 <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
-        <h1>Login</h1>
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit" class="btn">Login</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        Hello
     </form>
 </div>
 
