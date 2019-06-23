@@ -16,20 +16,31 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <script>
       $(document).ready(function(){
-          //Handles menu drop down
+
           $('.dropdown-menu').find('form').click(function (e) {
               e.stopPropagation();
           });
+          // popup_content_wrap
       });
       $('#edit').on('click', function(){
         $('body').addClass('active-modal');
         $('.box-modal').addClass('modal-show');
       });
 
-      // $('.overlay').on('click', function(){
-      //   $('body').removeClass('active-modal');
-      //   $('.box-modal').removeClass('modal-show');
-      // })
+      $('.overlay').on('click', function(){
+        $('body').removeClass('active-modal');
+        $('.box-modal').removeClass('modal-show');
+      })
+
+      function popup_content(hideOrshow) {
+        if (hideOrshow == 'hide') document.getElementById('popup_content_wrap').style.display = "none";
+        else document.getElementById('popup_content_wrap').removeAttribute('style');
+    }
+    // window.onload = function () {
+    //     setTimeout(function () {
+    //         popup_content('show');
+    //     }, 100);
+    // }
 
 </script>
       <link rel="stylesheet" href="CSS/bootsnipp.css">
@@ -44,7 +55,7 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" onclick="openForm()" href="#">About Us</a>
+          <a class="navbar-brand" onclick="popup_content('show')" href="#">About Us</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav">
@@ -54,7 +65,7 @@
         </ul>
         <ul class="nav navbar-nav">
            <li "nav-item active ">
-               <a href="#" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
+               <a href="login.html" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
            </li>
            <li class="dropdown">
               <a href="#" class="nav-link navbar-brand" data-toggle="dropdown">Sign in <span class="sr-only">(current)</span><b class="caret"></b></a>
@@ -92,43 +103,30 @@
            </li>
         </ul>
         </div>
-          <!-- <div class="text-alignment collapse navbar-collapse" id="navbarsExampleDefault">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" onclick="openForm()" href="#">Sign Up</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Contact Us</a>
-                  </li>
-              </ul>
-
-          </div> -->
       </nav>
 <main role="main" class="container">
 
   <img src="undergrounds.png" class="grid-image rounded mx-auto d-block" width="15%" height="15%" style="margin-top:1%; margin-bottom:1px">
-<button type="button" class="open-button btn btn-primary btn-lg" onclick="openForm()" style="background-color:#0000cc;margin-left:auto;margin-right:auto;display:block">About Us <i class="em em-coffee"></i></button>
 
 <h1 style="margin-bottom:1%"> <center>Welcome to Undergrounds!</h1>  </center>
 <div class="row text-alignment">
 <div class="col-sm">
 <p class="lead">Help Londoners discover and share the best independent coffee shops.</p>
-<p1>Undergrounds is the new website to review and recommend up and coming indie coffee shops.
-    If you can't live without aromatic coffees, we're here to find you match ++ EMOJI.</p1>
 </div>
 <div class="col-sm">
 <image src="https://alex4d.files.wordpress.com/2007/11/alex4d_2012_07_big.png" width=100% height=100%>
 </div>
 </div>
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<button type="button" class="open-button btn btn-primary btn-lg" onclick="openForm()" style="background-color:#0000cc;margin-left:auto;margin-right:auto;display:block;margin-top:5%;margin-bottom:20%">Click to join now <i class="em em-coffee"></i></button>
-<div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-        Hello
-    </form>
+<button type="button" class="open-button btn btn-primary btn-lg" onclick="popup_content('show')" style="background-color:#0000cc;margin-left:auto;margin-right:auto;display:block;margin-top:5%;margin-bottom:20%">Click to join now <i class="em em-coffee"></i></button>
+<div id="popup_content_wrap" style='display:none'>
+    <div id="popup_content">
+        <center>
+             <h1 style="font-family:'Kaushan Script', cursive;">About Undergrounds</h1>
+<hr><hr>			 <p>Undergrounds is a website to review and recommend Indie coffee shops in London.</p>
+            <input type="submit" name="submit" value="Continue" class="btn btn-primary" onClick="popup_content('hide')" />
+        </center>
+    </div>
 </div>
 
 <script>
