@@ -29,7 +29,6 @@ img {
     position: absolute;
     z-index: 2;
     font-size: 15px;
-    top: 290px;
     background-color: white;
     border: 1px solid black;
     border-radius: 100%;
@@ -38,32 +37,108 @@ img {
 }
 
 .fa-coffee:hover {
-    color: brown;
-    border: 1px solid brown;
+    color: #823300;
+    border: 1px solid #823300;
     cursor: pointer;
     transform: scale(1.2);
 }
 
+/* The Central Line */
+.central {
+    top: 290px;
+}
+
+/* Shepherd's Bush */
 .one {
 left: 261px;
 }
 
+/* Marble Arch */
 .two {
 left: 500px;
 }
 
+/* Oxford Circus */
 .three {
     left: 619px;
 } 
 
+/* Tottenham Court Road */
 .four {
     left: 737px;
 }
 
+/* Holborn */
 .five {
     left: 810px;
 }
 
+/* Chancery Lane */
 .six {
     left: 871px;
+}
+
+/* -----The Northern Line----- */
+.northern {
+    right: 600px;
+}
+
+/* Warren Street */
+.seven {
+    top: 175px;
+}
+
+/* Charring Cross */
+.eight {
+    bottom: 193px;
+}
+
+/* Old Street */
+.nine {
+    right: 360px;
+    top: 180px;
+}
+
+/* London Bridge */
+.ten {
+    right: 360px;
+    bottom: 127px;
+}
+
+/* -----The Piccadilly Line----- */
+.piccadilly {
+    bottom: 260px;
+}
+
+/* Green Park */
+.eleven {
+    left: 560px;
+}
+
+/* Piccadilly Circus */
+.tweleve {
+    right: 665px;
+}
+
+
+/* -----The District Line----- */
+
+/* High Street Kensington */
+.thirteen {
+    top: 346px;
+    left: 352px;
+}
+
+/*Cannon Street*/
+.fourteen {
+    right: 420px;
+    bottom: 248px;
+}
+
+/* -----Bakerloo Line----- */
+
+/* Marylebone */
+.fifteen {
+    top: 127px;
+    left: 459px;
 }
