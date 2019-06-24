@@ -2,114 +2,174 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>London Map</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="mapstyle.css">
-    <script src="https://kit.fontawesome.com/fbb88617b2.js"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>The Map</title>
+
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="mapstyle.css">
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/fbb88617b2.js"></script>
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <!-- Brand and toggle get grouped for better mobile display -->
-   <div class="navbar-header">
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-     </button>
-     <a class="navbar-brand" onclick="popup_content('show')" href="#">About Us</a>
-   </div>
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="navbar-nav">
-         <li class="nav-item active">
-             <a class="nav-link navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
-         </li>
-         <li class="nav-item active ">
-             <a href="mappage.html" class="nav-link navbar-brand">The Map <span class="sr-only">(current)</span></a>
-         </li>
-   </ul>
-   <ul class="navbar-nav">
-      <li class="nav-item active ">
-          <a href="login.html" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="dropdown">
-         <a href="#" class="nav-link navbar-brand" data-toggle="dropdown">Sign in <span class="sr-only">(current)</span><b class="caret"></b></a>
-         <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
-            <li>
-               <div class="row">
-                  <div class="col-md-12">
-                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                        <div class="form-group">
-                           <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                           <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                        </div>
-                        <div class="form-group">
-                           <label class="sr-only" for="exampleInputPassword2">Password</label>
-                           <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                        </div>
-                        <div class="checkbox">
-                           <label>
-                           <input type="checkbox"> Remember me
-                           </label>
-                        </div>
-                        <div class="form-group">
-                           <button type="submit" class="btn btn-success btn-block">Sign in</button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <a class="navbar-brand" onclick="popup_content('show')" href="#">About Us</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="navbar-nav">
+            <li class="nav-item active">
+               <a class="nav-link navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="divider"></li>
-            <li>
-               <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
-               <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+            <li class="nav-item active ">
+               <a href="mappage.html" class="nav-link navbar-brand">The Map <span class="sr-only">(current)</span></a>
             </li>
          </ul>
-      </li>
-   </ul>
-   <ul class="navbar-nav navbar-right">
-      <li class="nav-item active">
-          <a class="nav-link navbar-brand" href="#">Contact Us <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook"></i></a></li>
-      <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter"></i></a></li>
-      <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-google-plus"></i></a></li>
-      <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-pinterest-p"></i></a></li>
-   </ul>
-</ul>
+         <ul class="navbar-nav">
+            <li class="nav-item active ">
+               <a href="login.html" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="dropdown">
+               <a href="#" class="nav-link navbar-brand" data-toggle="dropdown">Sign in <span
+                     class="sr-only">(current)</span><b class="caret"></b></a>
+               <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                  <li>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <form class="form" role="form" method="post" action="login" accept-charset="UTF-8"
+                              id="login-nav">
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                 <input type="email" class="form-control" id="exampleInputEmail2"
+                                    placeholder="Email address" required>
+                              </div>
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                 <input type="password" class="form-control" id="exampleInputPassword2"
+                                    placeholder="Password" required>
+                              </div>
+                              <div class="checkbox">
+                                 <label>
+                                    <input type="checkbox"> Remember me
+                                 </label>
+                              </div>
+                              <div class="form-group">
+                                 <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                     <input class="btn btn-primary btn-block" type="button" id="sign-in-google"
+                        value="Sign In with Google">
+                     <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter"
+                        value="Sign In with Twitter">
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <ul class="navbar-nav navbar-right">
+            <li class="nav-item active">
+               <a class="nav-link navbar-brand" href="#">Contact Us <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-twitter"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-google-plus-g"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-pinterest-p"></i></a></li>
+         </ul>
+         </ul>
 
+      </div>
+   </nav>
+
+
+   <!-- The Map -->
+
+   <div id="intro">
+      <p>Hover over the (coffee) stops to find out which coffee shop is featured in that area!</p>
    </div>
- </nav>
 
-    <div id="container">
-        <i class="fas fa-coffee central one"></i>
-        <i class="fas fa-coffee central two"></i>
-        <i class="fas fa-coffee central three"></i>
-        <i class="fas fa-coffee central four"></i>
-        <i class="fas fa-coffee central five"></i>
-        <i class="fas fa-coffee central six"></i>
-        <i class="fas fa-coffee northern seven"></i>
-        <i class="fas fa-coffee northern eight"></i>
-        <i class="fas fa-coffee northern nine"></i>
-        <i class="fas fa-coffee northern ten"></i>
-        <i class="fas fa-coffee piccadilly eleven"></i>
-        <i class="fas fa-coffee piccadilly tweleve"></i>
-        <i class="fas fa-coffee district thirteen"></i>
-        <i class="fas fa-coffee fourteen"></i>
-        <i class="fas fa-coffee fifteen"></i>
+   <!-- High Street Kensington -->
+   <i class="fas fa-coffee one"></i>
 
-        <img src="map-cut.png" alt="">
-    </div>
+   <!-- Tooltip -->
+   <span class="tip tip_1">
+      <p>Wayne's Coffee</p>
+   </span>
 
-    <script>
-        function openForm() {document.getElementById("myForm").style.display = "block";}
-        function closeForm() {document.getElementById("myForm").style.display = "none";}
-        </script>
+
+   <!-- Marylebone -->
+   <i class="fas fa-coffee two"></i>
+   <span class="tip tip_2">
+      <p>Gino's Coffee Bar</p>
+   </span>
+
+
+   <!-- Oxford Circus -->
+   <i class="fas fa-coffee three"></i>
+   <span class="tip tip_3">
+      <p>Benugo</p>
+   </span>
+
+   <!-- Holborn -->
+   <i class="fas fa-coffee four"></i>
+   <span class="tip tip_4">
+      <p>The Espresso Room</p>
+   </span>
+
+   <!-- Old Street -->
+   <i class="fas fa-coffee five"></i>
+   <span class="tip tip_5">
+      <p>Shoreditch Grind</p>
+   </span>
+
+   <!-- London Bridge -->
+   <i class="fas fa-coffee six"></i>
+   <span class="tip tip_6">
+      <p>Three Wheel Coffee</p>
+   </span>
+
+<!-- Mansion House -->
+<i class="fas fa-coffee seven"></i>
+<span class="tip tip_7">
+   <p>Rosslyn Coffee</p>
+</span>
+
+
+   <img src="map-cut.png" alt="">
+   </div>
+
+   <script>
+      function openForm() { document.getElementById("myForm").style.display = "block"; }
+      function closeForm() { document.getElementById("myForm").style.display = "none"; }
+   </script>
+   <script src="mapstyle.js"></script>
 </body>
 
 </html>
