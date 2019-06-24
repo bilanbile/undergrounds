@@ -5,21 +5,21 @@ body {
     height: 100vh;
 }
 
-/* #container {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-} */
-
 .navbar {
     border-radius: 0px;
 }
 
+#intro {
+    text-align: center;
+    font-family: 'Quicksand';
+    font-weight: 200;
+    font-size: 2em;
+}
 
 img {
     position: absolute;
     border-radius: 25px;
-    top: 100px;
+    bottom: 50px;
     left: 200px;
     width: 70%;
     box-shadow: 3px 8px 15px #8c8c8c;
@@ -43,102 +43,115 @@ img {
     transform: scale(1.2);
 }
 
-/* The Central Line */
-.central {
-    top: 290px;
-}
+/* -----The Stops----- */
 
-/* Shepherd's Bush */
+/* High Street Kensington */
 .one {
-left: 261px;
+    top: 385px;
+    left: 352px;
 }
 
-/* Marble Arch */
+/* Marylebone */
 .two {
-left: 500px;
+    top: 169px;
+    left: 459px;
 }
 
 /* Oxford Circus */
 .three {
-    left: 619px;
-} 
-
-/* Tottenham Court Road */
-.four {
-    left: 737px;
+    top: 333px;
+    left: 621px;
 }
 
 /* Holborn */
-.five {
-    left: 810px;
-}
-
-/* Chancery Lane */
-.six {
-    left: 871px;
-}
-
-/* -----The Northern Line----- */
-.northern {
-    right: 600px;
-}
-
-/* Warren Street */
-.seven {
-    top: 175px;
-}
-
-/* Charring Cross */
-.eight {
-    bottom: 193px;
+.four {
+    top: 333px;
+    right: 530px;
 }
 
 /* Old Street */
-.nine {
+.five {
     right: 360px;
-    top: 180px;
+    top: 226px;
 }
 
 /* London Bridge */
-.ten {
+.six {
     right: 360px;
-    bottom: 127px;
+    bottom: 85px;
 }
 
-/* -----The Piccadilly Line----- */
-.piccadilly {
-    bottom: 260px;
-}
-
-/* Green Park */
-.eleven {
-    left: 560px;
-}
-
-/* Piccadilly Circus */
-.tweleve {
-    right: 665px;
+/* Mansion House */
+.seven {
+    right: 459px;
+    bottom: 190px;
 }
 
 
-/* -----The District Line----- */
+/* -----Tooltips----- */
+
+/* General settings */
+.tip {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.tip.show {
+    display: block;
+}
+
+.tip > p {
+    font-family: 'Raleway';
+    margin: 0;
+}
+
+
+/* Individual tips */
 
 /* High Street Kensington */
-.thirteen {
-    top: 346px;
-    left: 352px;
+.tip_1 {
+    top: 385px;
+    left: 232px;
 }
-
-/*Cannon Street*/
-.fourteen {
-    right: 420px;
-    bottom: 248px;
-}
-
-/* -----Bakerloo Line----- */
 
 /* Marylebone */
-.fifteen {
-    top: 127px;
-    left: 459px;
+.tip_2 {
+    top: 200px;
+    left: 420px;
+}
+
+/* Oxford Circus */
+.tip_3 {
+    top: 293px;
+    left: 605px;
+}
+
+/* Holborn */
+.tip_4 {
+    top: 293px;
+    right: 475px;
+}
+
+/* Old Street */
+.tip_5 {
+    right: 400px;
+    top: 224px;
+}
+
+/* London Bridge */
+.tip_6 {
+    right: 300px;
+    bottom: 40px;
+}
+
+/* Mansion House */
+.tip_7 {
+    right: 420px;
+    bottom: 145px;
 }
