@@ -20,12 +20,12 @@ Nav_align_right{
 }
 
 p {
-	text-align:left;
-	float: left;
+	text-align:left
 }
 
 img {
-	float: right;
+	display: block;
+	margin-top: 20px
 }
 
 /* #bg {
