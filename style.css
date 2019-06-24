@@ -18,6 +18,11 @@ font-family: 'Kaushan Script', cursive;
 Nav_align_right{
         text-align: right;
 }
+
+p {
+	text-align:left
+}
+
 /* #bg {
     height: 100vh;
     width: 100vw;
