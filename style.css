@@ -11,7 +11,7 @@ body {
 }
 
 /*---------------------------------------------------- New edits ----------------------------------------- */
-/* Chaning the navbar settings */
+/* Changing the navbar settings */
 .navbar {
   font-family: 'Quicksand', 'Lora';
   border-radius: 0px !important;
@@ -72,7 +72,7 @@ body {
 
 /* the content in the about us pop up */
 .content h3 {
-  font-weight: bold; 
+  font-weight: bold;
   font-family: 'Lora', 'Quicksand', sans-serif;
   color: rgb(88, 14, 38);
   font-size: 2em;
