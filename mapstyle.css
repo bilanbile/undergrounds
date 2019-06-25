@@ -13,12 +13,55 @@ body {
     margin: 0 !important;
     background-color: rgba(141, 43, 30, 0.85) !important;
 }
+/* the content in the about us pop up */
+.content h3 {
+    font-family: 'Lora', 'Quicksand', sans-serif;
+    color: rgb(88, 14, 38);
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  
+  .content p {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(88, 14, 38);
+  }
+  
+  /* The buttons in the about us pop up */
+  .abt_btn {
+    background-color: rgba(0, 76, 163, 0.5);
+    border: 1px solid rgba(0, 76, 163, 0.5);
+    border: none;
+    border-radius: 0.5em;
+    transition: 0.3s;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    padding: 1em;
+  }
+  
+  .abt_btn:hover {
+    background-color: rgba(0, 76, 163, 1);
+    border: 1px solid rgba(0, 76, 163, 1);
+    border-radius: 2em;
+  }
+  
+  button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  button a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
 
 #intro {
     text-align: center;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', 'Lora', sans-serif;
     font-weight: 200;
-    font-size: 2em;
+    font-size: 1.25em;
+    padding: 0 7em;
     margin-top: 0.75em;
     color: rgb(88, 14, 38);
 }
@@ -163,3 +206,4 @@ img {
     right: 417px;
     bottom: 155px;
 }
+
