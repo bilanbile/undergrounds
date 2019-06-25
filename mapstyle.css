@@ -7,6 +7,11 @@ body {
 
 .navbar {
     border-radius: 0px;
+    font-family: 'Quicksand', 'Lora';
+    border-radius: 0px 0px 4px 4px !important;
+    font-size: 1em;
+    margin: 0 !important;
+    background-color: rgba(141, 43, 30, 0.85) !important;
 }
 
 #intro {
@@ -14,6 +19,8 @@ body {
     font-family: 'Quicksand';
     font-weight: 200;
     font-size: 2em;
+    margin-top: 0.75em;
+    color: rgb(88, 14, 38);
 }
 
 img {
@@ -29,6 +36,7 @@ img {
     position: absolute;
     z-index: 2;
     font-size: 15px;
+    color: black;
     background-color: white;
     border: 1px solid black;
     border-radius: 100%;
@@ -106,7 +114,7 @@ img {
     display: block;
 }
 
-.tip > p {
+.tip>p {
     font-family: 'Raleway';
     margin: 0;
 }
@@ -117,7 +125,7 @@ img {
 /* High Street Kensington */
 .tip_1 {
     top: 385px;
-    left: 232px;
+    left: 185px;
 }
 
 /* Marylebone */
@@ -128,30 +136,30 @@ img {
 
 /* Oxford Circus */
 .tip_3 {
-    top: 293px;
-    left: 605px;
+    top: 297px;
+    left: 590px;
 }
 
 /* Holborn */
 .tip_4 {
-    top: 293px;
-    right: 475px;
+    top: 297px;
+    right: 515px;
 }
 
 /* Old Street */
 .tip_5 {
-    right: 400px;
+    right: 395px;
     top: 224px;
 }
 
 /* London Bridge */
 .tip_6 {
-    right: 300px;
-    bottom: 40px;
+    right: 325px;
+    bottom: 48px;
 }
 
 /* Mansion House */
 .tip_7 {
-    right: 420px;
-    bottom: 145px;
+    right: 417px;
+    bottom: 155px;
 }

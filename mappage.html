@@ -12,12 +12,11 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
    <link rel="stylesheet" href="mapstyle.css">
+   <link rel="stylesheet" href="style.css">
 
    <!-- Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 
    <!-- Font Awesome -->
@@ -26,6 +25,33 @@
    <!-- jQuery -->
    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"></script>
+
+   <script>
+      $(document).ready(function () {
+         $('.dropdown-menu').find('form').click(function (e) {
+            e.stopPropagation();
+         });
+         // popup_content_wrap
+      });
+
+      $('#edit').on('click', function () {
+         $('body').addClass('active-modal');
+         $('.box-modal').addClass('modal-show');
+      });
+
+      $('.overlay').on('click', function () {
+         $('body').removeClass('active-modal');
+         $('.box-modal').removeClass('modal-show');
+      });
+
+      function popup_content(hideOrshow) {
+         if (hideOrshow == 'hide') {
+            document.getElementById('popup_content_wrap').style.display = "none";
+         } else {
+            document.getElementById('popup_content_wrap').removeAttribute('style');
+         }
+      };
+   </script>
 
 </head>
 
@@ -138,15 +164,15 @@
    </span>
 
    <!-- Holborn -->
-    <a href="undergrounds-form-holborn.html"><i class="fas fa-coffee four"></i></a>
+   <a href="undergrounds-form-holborn.html"><i class="fas fa-coffee four"></i></a>
    <span class="tip tip_4">
-    <p>Holborn</p>
+      <p>Holborn</p>
    </span>
 
    <!-- Old Street -->
-     <a href="undergrounds-form-old-street.html"><i class="fas fa-coffee five"></i></a>
+   <a href="undergrounds-form-old-street.html"><i class="fas fa-coffee five"></i></a>
    <span class="tip tip_5">
-    <p>Old Street</p>
+      <p>Old Street</p>
    </span>
 
    <!-- London Bridge -->
@@ -155,14 +181,28 @@
       <p>London Bridge</p>
    </span>
 
-<!-- Mansion House -->
-<a href="undergrounds-form-mansion-house.html"><i class="fas fa-coffee seven"></i></a>
-<span class="tip tip_7">
-  <p>Mansion House</p>
-</span>
+   <!-- Mansion House -->
+   <a href="undergrounds-form-mansion-house.html"><i class="fas fa-coffee seven"></i></a>
+   <span class="tip tip_7">
+      <p>Mansion House</p>
+   </span>
 
 
    <img src="map-cut.png" alt="">
+
+    <!-- About Us Pop Up -->
+    <div id="popup_content_wrap" style='display:none'>
+      <div id="popup_content">
+         <div class="close"></div>
+         <header></header>
+         <div class="content">
+            <h3>About Undergrounds</h3>
+            <p>Undergrounds is a website to review and recommend up and coming indie coffee shops in London.
+               Take tour of our interactive map!</p><br>
+            <button class="abt_btn" onClick="popup_content('hide')">Got it, thanks!</button>&nbsp
+            <button class="abt_btn"><a href="mappage.html">Take me to the Map!</a></button>
+         </div>
+      </div>
    </div>
 
    <script>
@@ -170,6 +210,7 @@
       function closeForm() { document.getElementById("myForm").style.display = "none"; }
    </script>
    <script src="mapstyle.js"></script>
+
 </body>
 
 </html>
