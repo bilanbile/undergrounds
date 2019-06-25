@@ -24,7 +24,7 @@ $(document).ready(function() {
     $.validator.addMethod(
         "checkChain",
         function (value, element) {
-            if (value.includes('costa') || value.includes('starbucks') || value.includes('caffenero') || value.includes('pret.com') || value.includes('pret.co.uk') || value.includes('eat.co.uk') || value.includes('amtcoffee') ||  value.includes('cafferitazza')) {
+            if (value.includes('costa') || value.includes('starbucks') || value.includes('caffenero') || value.includes('www.illy.com') || value.includes('pret.com') || value.includes('pret.co.uk') || value.includes('eat.co.uk') || value.includes('amtcoffee') ||  value.includes('cafferitazza')) {
                 return false;
             }
             return true;
