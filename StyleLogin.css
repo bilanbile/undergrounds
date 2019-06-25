@@ -1,61 +1,15 @@
 body {
+  margin: 0;
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
   background: rgba(0, 0, 0, 0.76);
   background-image: url(coff.jpg);
+  box-sizing: border-box;
 }
 
-/* Chaning the navbar settings */
-.navbar {
-  font-family: 'Quicksand', 'Lora';
-  border-radius: 0px 0px 4px 4px !important;
-  font-size: 1em;
-  margin: 0 !important;
-  background-color: rgba(141, 43, 30, 0.85) !important;
-}
-/* the content in the about us pop up */
-.content h3 {
-  font-family: 'Lora', 'Quicksand', sans-serif;
-  color: rgb(88, 14, 38);
-  font-size: 2em;
-  margin-top: 20px;
-}
-
-.content p {
-  font-family: 'Raleway', sans-serif;
+.container {
   color: rgb(88, 14, 38);
 }
-
-/* The buttons in the about us pop up */
-.abt_btn {
-  background-color: rgba(0, 76, 163, 0.5);
-  border: 1px solid rgba(0, 76, 163, 0.5);
-  border: none;
-  border-radius: 0.5em;
-  transition: 0.3s;
-  color: #fff;
-  cursor: pointer;
-  font-family: 'Quicksand';
-  padding: 1em;
-}
-
-.abt_btn:hover {
-  background-color: rgba(0, 76, 163, 1);
-  border: 1px solid rgba(0, 76, 163, 1);
-  border-radius: 2em;
-}
-
-button a {
-  color: #fff;
-  text-decoration: none;
-}
-
-button a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* navbar settings end */
 
 a {
   text-decoration: none !important;
@@ -64,11 +18,68 @@ a {
 h1:first-of-type {
   font-family: 'Quicksand', 'Trebuchet MS', sans-serif !important;
   font-weight: 600;
+  color: rgb(88, 14, 38);
 }
 
 button:first-of-type {
   font-family: 'Quicksand', 'Trebuchet MS', sans-serif !important;
 }
+
+/* Popup settings */
+#popup_content_wrap {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.74);
+  z-index: 9999999;
+}
+
+#popup_content {
+  width: 500px;
+  max-width: 90%;
+  height: 500px;
+  padding: 0px;
+  position: relative;
+  top: 134px;
+  left: 480px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+header {
+  background: url(https://www.lonelyplanet.com/news/wp-content/uploads/2016/10/GettyImages-512333921.jpg) center 100%;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+  height: 250px;
+  width: 500px;
+}
+
+/* .content {
+  height: 250px;
+  padding: 1em 2em;
+  text-align: center;
+} */
+
+/*h3 {
+  color: #212121;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.25em;
+} */
+/* popup settins end */
+
+
 
 .myform {
   position: relative;
@@ -136,4 +147,188 @@ form .error {
 
 #second {
   display: none;
+}
+
+
+/* Chaning the navbar settings */
+.navbar {
+  font-family: 'Quicksand', 'Lora';
+  border-radius: 0px !important;
+  font-size: 1em;
+  margin: 0 !important;
+  background-color: rgba(141, 43, 30, 0.85) !important;
+}
+
+/* the content in the about us pop up */
+.content {
+  padding: 0px 28px 0px 28px;
+  text-align: center;
+}
+
+.content h3 {
+  font-family: 'Lora', 'Quicksand', sans-serif;
+  color: rgb(88, 14, 38);
+  font-size: 28px;
+  margin: 20px 0px 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content p {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(88, 14, 38);
+  margin-bottom: -0.5em;
+  font-size: 17.5px;
+}
+
+/* The buttons in the about us pop up */
+.abt_btn {
+  background-color: rgba(0, 76, 163, 0.5);
+  border: 1px solid rgba(0, 76, 163, 0.5);
+  border: none;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Quicksand';
+  padding: 14px;
+  font-size: 14px;
+}
+
+.abt_btn:hover {
+  background-color: rgba(0, 76, 163, 1);
+  border: 1px solid rgba(0, 76, 163, 1);
+  border-radius: 2em;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-nav > label {
+  background-color: rgba(0, 76, 163, 0.5) !important;
+  border: 1px solid rgba(0, 76, 163, 0.5) !important;
+  border: none;
+  border-radius: 2em;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Quicksand', "Segoe Ui", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 3em;
+  transition: box-shadow 0.3s ease;
+  margin: 2em 0px 0px 0px !important;
+  transition: 0.4s background-color;
+}
+
+.navbar-nav > .btn:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 76, 163, 1) !important;
+  border: 1px solid rgba(0, 76, 163, 1) !important;
+  display: block;
+}
+/* navbar settings end */
+
+.close:after {
+  color: #fff;
+  content: "X";
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 600;
+  position: absolute;
+  right: 0.8em;
+  top: 0.5em;
+  -webkit-transform: scaleX(1.25);
+  transform: scaleX(1.25);
+  transition: color 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.close:hover:after {
+  color: #212121;
+}
+
+@-webkit-keyframes close {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  20% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  20% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+@-webkit-keyframes open {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  80% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  80% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

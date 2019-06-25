@@ -2,13 +2,17 @@
 <html>
 
 <head>
+   <title>Sign Up</title>
+   <link rel="stylesheet" href="StyleLogin.css">
+ 
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-   <link rel="stylesheet" href="StyleLogin.css">
+
 
    <!-- Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 
    <!-- jQuery library -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -92,6 +96,29 @@
             }
          });
       });
+
+      $(document).ready(function () {
+
+         $('.dropdown-menu').find('form').click(function (e) {
+            e.stopPropagation();
+         });
+
+         // popup_content_wrap
+      });
+      $('#edit').on('click', function () {
+         $('body').addClass('active-modal');
+         $('.box-modal').addClass('modal-show');
+      });
+
+      $('.overlay').on('click', function () {
+         $('body').removeClass('active-modal');
+         $('.box-modal').removeClass('modal-show');
+      })
+
+      function popup_content(hideOrshow) {
+         if (hideOrshow == 'hide') document.getElementById('popup_content_wrap').style.display = "none";
+         else document.getElementById('popup_content_wrap').removeAttribute('style');
+      }
    </script>
 
 </head>
@@ -101,83 +128,83 @@
    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <body>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                  aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <a class="navbar-brand" onclick="popup_content('show')" href="#">About Us</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               <ul class="navbar-nav">
-                  <li class="nav-item active">
-                     <a class="nav-link navbar-brand" href="Homepage.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active ">
-                     <a href="mappage.html" class="nav-link navbar-brand">The Map <span class="sr-only">(current)</span></a>
-                  </li>
-               </ul>
-               <ul class="navbar-nav">
-                  <li class="nav-item active ">
-                     <a href="login.html" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="dropdown">
-                     <a href="#" class="nav-link navbar-brand" data-toggle="dropdown">Sign in <span
-                           class="sr-only">(current)</span><b class="caret"></b></a>
-                     <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
-                        <li>
-                           <div class="row">
-                              <div class="col-md-12">
-                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8"
-                                    id="login-nav">
-                                    <div class="form-group">
-                                       <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                       <input type="email" class="form-control" id="exampleInputEmail2"
-                                          placeholder="Email address" required>
-                                    </div>
-                                    <div class="form-group">
-                                       <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2"
-                                          placeholder="Password" required>
-                                    </div>
-                                    <div class="checkbox">
-                                       <label>
-                                          <input type="checkbox"> Remember me
-                                       </label>
-                                    </div>
-                                    <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Sign in</button>
-                                    </div>
-                                 </form>
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <a class="navbar-brand" onclick="popup_content('show')" href="#">About Us</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="navbar-nav">
+            <li class="nav-item active">
+               <a class="nav-link navbar-brand" href="Homepage.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+               <a href="mappage.html" class="nav-link navbar-brand">The Map <span class="sr-only">(current)</span></a>
+            </li>
+         </ul>
+         <ul class="navbar-nav">
+            <li class="nav-item active ">
+               <a href="login.html" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="dropdown">
+               <a href="#" class="nav-link navbar-brand" data-toggle="dropdown">Sign in <span
+                     class="sr-only">(current)</span><b class="caret"></b></a>
+               <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                  <li>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <form class="form" role="form" method="post" action="login" accept-charset="UTF-8"
+                              id="login-nav">
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                 <input type="email" class="form-control" id="exampleInputEmail2"
+                                    placeholder="Email address" required>
                               </div>
-                           </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                           <input class="btn btn-primary btn-block" type="button" id="sign-in-google"
-                              value="Sign In with Google">
-                           <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter"
-                              value="Sign In with Twitter">
-                        </li>
-                     </ul>
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                 <input type="password" class="form-control" id="exampleInputPassword2"
+                                    placeholder="Password" required>
+                              </div>
+                              <div class="checkbox">
+                                 <label>
+                                    <input type="checkbox"> Remember me
+                                 </label>
+                              </div>
+                              <div class="form-group">
+                                 <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                     <input class="btn btn-primary btn-block" type="button" id="sign-in-google"
+                        value="Sign In with Google">
+                     <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter"
+                        value="Sign In with Twitter">
                   </li>
                </ul>
-               <ul class="navbar-nav navbar-right">
-                  <li class="nav-item active">
-                     <a class="nav-link navbar-brand" href="#">Contact Us <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook"></i></a></li>
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter"></i></a></li>
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-google-plus"></i></a></li>
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-pinterest-p"></i></a></li>
-               </ul>
-               </ul>
-      
-            </div>
-         </nav>
-         <!-- navbar end -->
+            </li>
+         </ul>
+         <ul class="navbar-nav navbar-right">
+            <li class="nav-item active">
+               <a class="nav-link navbar-brand" href="#">Contact Us <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-google-plus"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-pinterest-p"></i></a></li>
+         </ul>
+         </ul>
+
+      </div>
+   </nav>
+   <!-- navbar end -->
 
    <div class="container">
       <div class="row">
@@ -270,19 +297,25 @@
       </div>
    </div>
 
-    <!-- About Us Pop Up -->
-    <div id="popup_content_wrap" style='display:none'>
-         <div id="popup_content">
-            <div class="close"></div>
-            <header></header>
-            <div class="content">
-               <h3>About Undergrounds</h3>
-               <p>Undergrounds is a website to review and recommend up and coming indie coffee shops in London.
-                  Take tour of our interactive map!</p><br>
-               <button class="abt_btn" onClick="popup_content('hide')">Got it, thanks!</button>&nbsp
-               <button class="abt_btn"><a href="mappage.html">Take me to the Map!</a></button>
-            </div>
+   <!-- About Us Pop Up -->
+   <div id="popup_content_wrap" style='display:none'>
+      <div id="popup_content">
+         <div class="close"></div>
+         <header></header>
+         <div class="content">
+            <h3>About Undergrounds</h3>
+            <p>Undergrounds is a website to review and recommend up and coming indie coffee shops in London.
+               Take tour of our interactive map!</p><br>
+            <button class="abt_btn" onClick="popup_content('hide')">Got it, thanks!</button>&nbsp
+            <button class="abt_btn"><a href="mappage.html">Take me to the Map!</a></button>
          </div>
       </div>
+   </div>
+
+   <script>
+         function openForm() { document.getElementById("myForm").style.display = "block"; }
+         function closeForm() { document.getElementById("myForm").style.display = "none"; }
+      </script>
 </body>
+
 </html>

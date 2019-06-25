@@ -14,7 +14,7 @@ body {
 /* Chaning the navbar settings */
 .navbar {
   font-family: 'Quicksand', 'Lora';
-  border-radius: 0px 0px 4px 4px !important;
+  border-radius: 0px !important;
   font-size: 1em;
   margin: 0 !important;
   background-color: rgba(141, 43, 30, 0.85) !important;
