@@ -61,11 +61,13 @@ $(document).ready(function() {
             var text3 = $("#coffeeAddress").val();
 
             $("#CoffeeList").append('<li><a href="' + text2 + '" target="_blank">' + text1 + '</a>' + ' at ' + '<a href="https://www.google.com/maps/place/' + text3 + '" target="_blank">' + text3 + '</a>' + '</li>');
+            $("#CoffeeList").append('<li><a href="' + text2 + '" target="_blank">' + text1 + '</a>' + ', ' + text3 + '</li>');
 
             // this can be removed - it's needed only when we really want to submit the form
             // which is not the case since we don't have a backend to deal with it
             // form.submit();
             alert('Thank you! Your entry has been added.')
+            alert('thank you! your entry has been added')
         }
     });
 });

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Landing HTML page</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+   <script>
+      $(document).ready(function () {
+
+         $('.dropdown-menu').find('form').click(function (e) {
+            e.stopPropagation();
+         });
+
+         // popup_content_wrap
+      });
+      $('#edit').on('click', function () {
+         $('body').addClass('active-modal');
+         $('.box-modal').addClass('modal-show');
+      });
+
+      $('.overlay').on('click', function () {
+         $('body').removeClass('active-modal');
+         $('.box-modal').removeClass('modal-show');
+      })
+
+      function popup_content(hideOrshow) {
+         if (hideOrshow == 'hide') document.getElementById('popup_content_wrap').style.display = "none";
+         else document.getElementById('popup_content_wrap').removeAttribute('style');
+      }
+
+      // For the Welcome
+      $(document).ready(function () {
+         $('.welcome').css("opacity", "1");
+      })
+      // For the Map
+      $(document).ready(function () {
+         $('.rightside').css({"opacity": "1", "width": "100%"});
+         $('#map').css("opacity", "1");
+      })
+
+   </script>
+
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <a class="navbar-brand" onclick="popup_content('show')" href="#">About Us</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="navbar-nav">
+            <li class="nav-item active">
+               <a class="nav-link navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+               <a href="#" class="nav-link navbar-brand">The Map <span class="sr-only">(current)</span></a>
+            </li>
+         </ul>
+         <ul class="navbar-nav">
+            <li class="nav-item active ">
+               <a href="login.html" class="nav-link navbar-brand">Sign up <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="dropdown">
+               <a href="#" class="nav-link navbar-brand" data-toggle="dropdown">Sign in <span
+                     class="sr-only">(current)</span><b class="caret"></b></a>
+               <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                  <li>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <form class="form" role="form" method="post" action="login" accept-charset="UTF-8"
+                              id="login-nav">
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                 <input type="email" class="form-control" id="exampleInputEmail2"
+                                    placeholder="Email address" required>
+                              </div>
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                 <input type="password" class="form-control" id="exampleInputPassword2"
+                                    placeholder="Password" required>
+                              </div>
+                              <div class="checkbox">
+                                 <label>
+                                    <input type="checkbox"> Remember me
+                                 </label>
+                              </div>
+                              <div class="form-group">
+                                 <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                     <input class="btn btn-primary btn-block" type="button" id="sign-in-google"
+                        value="Sign In with Google">
+                     <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter"
+                        value="Sign In with Twitter">
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <ul class="navbar-nav navbar-right">
+            <li class="nav-item active">
+               <a class="nav-link navbar-brand" href="#">Contact Us <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-google-plus"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-pinterest-p"></i></a></li>
+         </ul>
+         </ul>
+
+      </div>
+   </nav>
+   <!-- navbar end -->
+
+
+   <main role="main" class="container">
+
+      <img src="undergrounds.png" class="grid-image rounded mx-auto d-block" width="15%" height="15%"
+         style="margin-top:1%; margin-bottom:1px">
+
+
+      <div class="flex">
+         <div class="welcome">
+            <h1 style="margin-bottom:1%">
+               Welcome to Undergrounds!
+            </h1>
+
+            <div class=" text-alignment">
+               <div class="col-sm">
+                  <p class="lead">Help Londoners discover and share the best independent coffee shops.</p>
+               </div>
+            </div>
+         </div>
+
+
+         <div class="col-sm rightside">
+            <img id="map" src="https://alex4d.files.wordpress.com/2007/11/alex4d_2012_07_big.png" width="450px"
+               height="300px">
+         </div>
+
+      </div>
+
+
+      <!-- button -->
+      <div class="wrap">
+         <div id="right">
+            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+         </div>
+
+
+         <button type="button" class="open-button btn btn-primary btn-lg" onclick="popup_content('show')">
+            Click to join now <i class="em em-coffee"></i></button>
+      </div>
+
+      <!-- About Us Pop Up -->
+      <div id="popup_content_wrap" style='display:none'>
+         <div id="popup_content">
+            <div class="close"></div>
+            <header></header>
+            <div class="content">
+               <h3>About Undergrounds</h3>
+               <p>Undergrounds is a website to review and recommend up and coming indie coffee shops in London.
+                  Take tour of our interactive map!</p><br>
+               <button class="abt_btn" onClick="popup_content('hide')">Got it, thanks!</button>&nbsp
+               <button class="abt_btn"><a href="mappage.html">Take me to the Map!</a></button>
+            </div>
+         </div>
+
+      </div>
+      </div>
+
+
+
+   </main>
+   <script>
+      function openForm() { document.getElementById("myForm").style.display = "block"; }
+      function closeForm() { document.getElementById("myForm").style.display = "none"; }
+   </script>
+</body>
+
+</html>
